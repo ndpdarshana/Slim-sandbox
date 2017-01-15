@@ -3,12 +3,22 @@
 {% block content %}
   <div class="row">
     <h1> Sign Up...</h1>
+
     <form action="{{path_for('auth.signup')}}" method="post" autocomplete="off">
       <input type="email" name="email" placeholder="you@domain.com"/>
+      {% if errors.email %}
+        <span style="color:red">{{errors.email | first }}</span>
+      {% endif %}
       <br/>
       <input type="text" name="name" placeholder="Your Name"/>
+      {% if errors.email %}
+        <span style="color:red">{{errors.name | first }}</span>
+      {% endif %}
       <br/>
       <input type="password" name="password" placeholder="password"/>
+      {% if errors.email %}
+        <span style="color:red">{{errors.password | first }}</span>
+      {% endif %}
       </br/>
       <button type="submit">Sign Up</button>
     </form>
