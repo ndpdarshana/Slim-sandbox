@@ -1,0 +1,16 @@
+{% extends 'templates/app.twig' %}
+
+{% block content %}
+  <div class="row">
+    <h1> Sign Up...</h1>
+    <form action="{{path_for('auth.signup')}}" method="post" autocomplete="off">
+      <input type="email" name="email" placeholder="you@domain.com"/>
+      <br/>
+      <input type="text" name="name" placeholder="Your Name"/>
+      <br/>
+      <input type="password" name="password" placeholder="password"/>
+      </br/>
+      <button type="submit">Sign Up</button>
+    </form>
+  </div>
+{% endblock %}
