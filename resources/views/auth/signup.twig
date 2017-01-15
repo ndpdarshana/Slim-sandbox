@@ -5,17 +5,17 @@
     <h1> Sign Up...</h1>
 
     <form action="{{path_for('auth.signup')}}" method="post" autocomplete="off">
-      <input type="email" name="email" placeholder="you@domain.com"/>
+      <input type="email" name="email" placeholder="you@domain.com" value="{{old.email}}"/>
       {% if errors.email %}
         <span style="color:red">{{errors.email | first }}</span>
       {% endif %}
       <br/>
-      <input type="text" name="name" placeholder="Your Name"/>
+      <input type="text" name="name" placeholder="Your Name" value="{{old.name}}"/>
       {% if errors.email %}
         <span style="color:red">{{errors.name | first }}</span>
       {% endif %}
       <br/>
-      <input type="password" name="password" placeholder="password"/>
+      <input type="password" name="password" placeholder="password" value="{{old.password}}"/>
       {% if errors.email %}
         <span style="color:red">{{errors.password | first }}</span>
       {% endif %}
