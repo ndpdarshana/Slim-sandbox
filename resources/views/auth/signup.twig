@@ -21,6 +21,8 @@
       {% endif %}
       </br/>
       <button type="submit">Sign Up</button>
+
+      {{ csrf.field | raw }}
     </form>
   </div>
 {% endblock %}
