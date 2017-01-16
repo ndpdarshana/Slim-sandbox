@@ -1,3 +1,11 @@
 <nav>
 <a href="home">Home</a>
+{%if auth.check %}
+  <p>User signed in</p>
+  <p>User: <b><i>{{auth.user.name}}</i></b></p>
+{%else%}
+  <a href="{{path_for(auth.signup)}}">Signup</a>
+  <a href="{{path_for(auth.signin)}}">Signin</a>
+  <p>No user signed in</p>
+{%endif%}
 </nav>
