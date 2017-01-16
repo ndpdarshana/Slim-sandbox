@@ -33,4 +33,8 @@ class Auth{
 
     return false;
   }
+
+  public function signout(){
+    unset($_SESSION['user']);
+  }
 }
