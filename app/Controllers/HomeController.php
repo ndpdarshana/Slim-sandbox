@@ -7,6 +7,7 @@ use Slim\Views\twig as View;
 class HomeController extends Controller{
 
   public function index($request, $response){
+    $this->flash->addMessage('global', 'test Flash Message');
     return $this->view->render($response, 'home.twig');
   }
 
