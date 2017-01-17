@@ -4,6 +4,7 @@
   <p>User signed in</p>
   <p>User: <b><i>{{auth.user.name}}</i></b></p>
   <a href="{{path_for('auth.signout')}}">Signout</a>
+  <a href="{{path_for('auth.changepassword')}}">Change Password</a>
 {%else%}
   <a href="{{path_for('auth.signup')}}">Signup</a>
   <a href="{{path_for('auth.signin')}}">Signin</a>

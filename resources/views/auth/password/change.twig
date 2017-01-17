@@ -1,0 +1,23 @@
+{% extends 'templates/app.twig' %}
+
+{% block content %}
+  <div class="row">
+    <h1> Change Password...</h1>
+
+    <form action="{{path_for('auth.changepassword')}}" method="post" autocomplete="off">
+      <input type="password" name="oldpassword" placeholder=" Old Password" value="{{old.password}}"/>
+      {% if errors.email %}
+        <span style="color:red">{{errors.email | first }}</span>
+      {% endif %}
+      <br/>
+      <input type="password" name="newpassword" placeholder="New Password" value="{{old.password}}"/>
+      {% if errors.password %}
+        <span style="color:red">{{errors.password | first }}</span>
+      {% endif %}
+      </br/>
+      <button type="submit">Change Password</button>
+
+      {{ csrf.field | raw }}
+    </form>
+  </div>
+{% endblock %}
